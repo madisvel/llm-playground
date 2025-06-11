@@ -5,7 +5,7 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 
 # Copy requirements and install Python dependencies
 COPY ../requirements.txt /tmp/requirements.txt
-RUN pip3 install --user -r /tmp/requirements.txt \
+RUN pip3 install -r /tmp/requirements.txt \
     && rm /tmp/requirements.txt
 
 # Expose Ollama's default port (if needed)
